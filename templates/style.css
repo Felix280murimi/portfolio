@@ -192,9 +192,10 @@ section .title::after{
 }
 .about .about-content .left img{
     height: 400px;
-    width: 400px; opacity: 0.9;
-    object-fit: cover;
+    width: 400px; /*opacity: 0.9;*/
     border-radius: 6px;
+    object-fit: contain;
+    background-position: center no-repeat;
 }
 .about .about-content .left img:hover{
     opacity: 1;
@@ -377,6 +378,13 @@ section .title::after{
 .contact .contact-content .info .sub-title{
     color: #333;
 }
+.contact .contact-content .info .email .sub-title:hover{
+    color: blue; 
+    border-bottom: 1px solid blue;
+    cursor: pointer;
+    font-family: cursive;
+    transition: all ease-in-out;
+}
 .contact .right form .fields{
     display: flex;
 }
@@ -440,6 +448,17 @@ footer{
     background: #111;
     padding: 20px 23px;
     color: #fff;
+}
+footer .footer-content{
+    display: flex;
+    align-items: center;
+}
+footer .footer-content .images {
+    margin-left: 0px;
+}
+footer .footer-content .images .image1{
+    width: 30px;
+    height: 30px;
 }
 footer span a{
     color: cadetblue;
@@ -556,5 +575,11 @@ footer span a:hover{
     }
     .about .about-content .column .left{
         width: 60px;
+    }
+}
+@media(max-width: 400px) {
+    footer .footer-content{
+        display: block;
+        align-items: center;
     }
 }
